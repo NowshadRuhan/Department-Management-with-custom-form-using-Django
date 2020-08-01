@@ -1,7 +1,7 @@
 # Department-Management-with-custom-form-using-Django
  Department management system, with some custom from and custom models using Django function based project.
  # Main 3 custom models 
-   1. Department
+   1. Departments
    2. Teachers
    3. Students
 
