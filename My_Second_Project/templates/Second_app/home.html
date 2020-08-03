@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <<link rel="stylesheet" href="{% static "css/mystyle.css" %}">
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>This is Home page of My Second Project --> Second App </h1>
+    <button><a align="center" href="/form/">Add New Department</a></button>
+    <h2> {{name}}</h2>
+    <h1>Department List</h1>
+    <table border="2px" align="center" style="margin-bottom: 20px;">
+      <tr>
+          <th>Department Name</th>
+          <th>Department Code</th>
+          <th>Department Course Number</th>
+      </tr>
+      {% for row in department_list %}
+      <tr>
+          <td>{{ row.department_name }}</td>
+          <td>{{ row.department_code }}</td>
+          <td>{{ row.department_num_course }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <h1>Teachers List</h1>
+    <table border="2px" align="center" style="margin-bottom: 20px;">
+      <tr>
+          <th>Teacher Name</th>
+          <th>Teacher Usernam</th>
+          <th>Teacher City</th>
+          <th>Teacher Country</th>
+          <th>Teacher Phone</th>
+          <th>Teacher Address</th>
+      </tr>
+      {% for row in teacher_list %}
+      <tr>
+          <td>{{ row.teacher_full_name }}</td>
+          <td>{{ row.teacher_username }}</td>
+          <td>{{ row.teacher_city }}</td>
+          <td>{{ row.teacher_country }}</td>
+          <td>{{ row.teacher_phone }}</td>
+          <td>{{ row.teacher_address }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <h1>Students List</h1>
+    <table border="2px" align="center" style="margin-bottom: 20px;">
+      <tr>
+          <th>Student Name</th>
+          <th>Student Usernam</th>
+          <th>Student City</th>
+          <th>Student Country</th>
+          <th>Student Address</th>
+          <th>Student Phone</th>
+      </tr>
+      {% for row in students_list %}
+      <tr>
+          <td>{{ row.full_name }}</td>
+          <td>{{ row.user_name }}</td>
+          <td>{{ row.city_name }}</td>
+          <td>{{ row.country_name }}</td>
+          <td>{{ row.address }}</td>
+          <td>{{ row.phone }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+
+    <div class="container" align="center">
+
+      <img src="{% static "images/nowshad.jpg" %}" alt="loading">
+
+    </div>
+
+  </body>
+</html>
